@@ -11,6 +11,11 @@ async function updateProduct(request, response) {
             return response.status(401).send("product not existed");
         }
 
+        
+        if(name == null || description == null || value == null){
+            return response.status(401).send("invalid request value");
+        }
+        
         const query = " UPDATE products SET name = $1, description = $2, value = $3 WHERE id = $4;"
         
         const result = (await db.query(query, [name, description, value, id])).command
