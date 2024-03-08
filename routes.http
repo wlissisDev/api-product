@@ -12,7 +12,7 @@ GET  http://localhost:5555/products
 Content-Type: application/json
 
 ### busca  produtos por ID
-GET  http://localhost:5555/products/7
+GET  http://localhost:5555/products/8
 Content-Type: application/json
 
 ### atualiza um produto

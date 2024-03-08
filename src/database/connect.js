@@ -1,11 +1,7 @@
 const pg = require('pg');
-const db = new pg.Client({
-    host: "localhost",
-    port: 5432,
-    database: "postgres",
-    user: "postgres",
-    password: "senha"
-});
+const connectionString = "postgres://postgres:senha@localhost:5432/postgres";
+
+const db = new pg.Client({connectionString});
 db.connect();
 
 const tableCreate = "CREATE TABLE IF NOT EXISTS products (    id SERIAL PRIMARY KEY,    name VARCHAR(255),    description VARCHAR(255),    value INT);"
