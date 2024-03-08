@@ -7,7 +7,7 @@ async function updateProduct(request, response) {
 
         const existedProduct = (await db.query("SELECT * FROM products WHERE id=$1",[id])).rows;
 
-        if(!existedProduct){
+        if(!existedProduct[0]){
             return response.status(401).send("product not existed");
         }
 

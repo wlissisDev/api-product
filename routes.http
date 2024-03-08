@@ -15,7 +15,7 @@ Content-Type: application/json
 GET  http://localhost:5555/products/7
 Content-Type: application/json
 
-###
+### atualiza um produto
 PUT  http://localhost:5555/products/7
 Content-Type: application/json 
 
@@ -24,3 +24,7 @@ Content-Type: application/json
     "description":"Cor preta,  40 polegadas",
     "value":4000
 }
+
+###deleta um produto
+DELETE http://localhost:5555/products/111
+Content-Type: application/json
