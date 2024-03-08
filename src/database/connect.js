@@ -12,7 +12,6 @@ const tableCreate = "CREATE TABLE IF NOT EXISTS products (    id SERIAL PRIMARY 
 
 db.query(tableCreate, [], (err, result) => {
     if (err) console.log("Error: " + err)
-    console.log(result)
 });
 
 

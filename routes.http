@@ -1,0 +1,26 @@
+POST http://localhost:5555/products
+Content-Type: application/json
+
+{
+    "name":"PC",
+    "description":"Cor preta, 22polegadas, Core i5, 16G RAM",
+    "value":1500
+}
+
+### busca todos os produtos
+GET  http://localhost:5555/products
+Content-Type: application/json
+
+### busca  produtos por ID
+GET  http://localhost:5555/products/7
+Content-Type: application/json
+
+###
+PUT  http://localhost:5555/products/7
+Content-Type: application/json 
+
+{
+    "name":"TV Samsung",
+    "description":"Cor preta,  40 polegadas",
+    "value":4000
+}
