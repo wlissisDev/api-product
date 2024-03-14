@@ -9,7 +9,7 @@ async function createProduct(request, response) {
         }
 
 
-        const query = "INSERT INTO products(name, description, value,  img_url) VALUES($1,$2,$3,$4);"
+        const query = "INSERT INTO products(name, description, value, img_url) VALUES($1,$2,$3,$4);"
         await db.query(query, [name, description, value, img_url]);
         return response.status(201).send("created")
     } catch (error) {
